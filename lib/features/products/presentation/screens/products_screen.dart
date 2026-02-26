@@ -135,7 +135,6 @@ class _CategoryTabViewState extends State<_CategoryTabView>
   Widget build(BuildContext context) {
     super.build(context);
     return CustomScrollView(
-      key: PageStorageKey<String>('page_view_${widget.index}'),
       physics: const AlwaysScrollableScrollPhysics(),
       slivers: [
         if (widget.products.isNotEmpty)

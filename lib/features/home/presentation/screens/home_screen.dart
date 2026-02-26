@@ -52,7 +52,7 @@ class _HomeScreenState extends State<HomeScreen> {
             ProductsScreen(),
             Center(child: Text('Message')),
             Center(child: Text('Cart')),
-            const ProfileScreen(),
+            ProfileScreen(),
           ],
         ),
         bottomNavigationBar: const HomeNavBar(),
