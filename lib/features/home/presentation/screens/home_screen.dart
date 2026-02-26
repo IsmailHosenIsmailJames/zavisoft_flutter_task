@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:zavisoft_flutter_task/features/auth/presentation/screens/profile_screen.dart';
 import 'package:zavisoft_flutter_task/features/home/presentation/bloc/home_bloc.dart';
 import 'package:zavisoft_flutter_task/features/home/presentation/bloc/home_event.dart';
 import 'package:zavisoft_flutter_task/features/home/presentation/bloc/home_state.dart';
@@ -51,7 +52,7 @@ class _HomeScreenState extends State<HomeScreen> {
             ProductsScreen(),
             Center(child: Text('Message')),
             Center(child: Text('Cart')),
-            Center(child: Text('Profile')),
+            const ProfileScreen(),
           ],
         ),
         bottomNavigationBar: const HomeNavBar(),

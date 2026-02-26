@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:zavisoft_flutter_task/core/network/api_client.dart';
 import 'package:zavisoft_flutter_task/core/theme/app_theme.dart';
+import 'package:zavisoft_flutter_task/features/auth/data/auth_repository.dart';
+import 'package:zavisoft_flutter_task/features/auth/presentation/bloc/auth_bloc.dart';
 import 'package:zavisoft_flutter_task/features/home/presentation/bloc/home_bloc.dart';
 import 'package:zavisoft_flutter_task/features/home/presentation/bloc/home_event.dart';
 import 'package:zavisoft_flutter_task/features/home/presentation/screens/home_screen.dart';
@@ -26,6 +28,10 @@ class MyApp extends StatelessWidget {
           create: (context) => ProductsBloc(
             repository: ProductRepository(apiClient: ApiClient()),
           ),
+        ),
+        BlocProvider(
+          create: (context) =>
+              AuthBloc(repository: AuthRepository(apiClient: ApiClient())),
         ),
       ],
       child: MaterialApp(
